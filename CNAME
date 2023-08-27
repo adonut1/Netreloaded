@@ -1,1 +1,146 @@
-netreloaded.com.ng
+<!DOCTYPE html>
+<html lan="en-us" class="white-skin" data-skin=""dark" prefix="0g: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<title> Netreloaded home  </title>
+<link rel="icon" type="image/x-icon" href="logo 2.jpg"/>
+       <xxc
+            .alert-warning {
+                color: #8a6d3b;
+                background-color: #fcf8e3;
+                border-color: #faebcc
+            }
+
+            .alert-warning hr {
+                border-top-color: #f7e1b5
+            }
+
+            .alert {
+                padding: 20px;
+                background-color: #0088ff;
+                background-color: #0088ff;
+                color: white;
+            }
+
+            .closebtn {
+                margin-left: 15px;
+                color: white;
+                font-weight: bold;
+                float: right;
+                font-size: 22px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .closebtn:hover {
+                color: black;
+            }
+
+            /* CSS */
+            .fa-fa-download {
+                align-items: center;
+                appearance: none;
+                background-color: #FCFCFD;
+                border-radius: 4px;
+                border-width: 0;
+                box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+                box-sizing: border-box;
+                color: #36395A;
+                cursor: pointer;
+				display: inline-flex;
+                font-family: "JetBrains Mono",monospace;
+                height: 48px;
+                justify-content: center;
+                line-height: 1;
+                list-style: none;
+                overflow: hidden;
+                padding-left: 16px;
+                padding-right: 16px;
+                position: relative;
+                text-align: left;
+                text-decoration: none;
+                transition: box-shadow .15s,transform .15s;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                white-space: nowrap;
+                will-change: box-shadow,transform;
+                font-size: 18px;
+            }
+
+            .fa-fa-download:focus {
+                box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+            }
+
+            .fa-fa-download:hover {
+                box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+                transform: translateY(-2px);
+            }
+
+            .fa-fa-download:active {
+                box-shadow: #D6D6E7 0 3px 7px inset;
+                transform: translateY(2px);
+            }
+
+            .fa-fa-download:before {
+                content: "⬇️";
+                left: 0;
+            }
+        </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<img src="logo 2.jpg" alt="logo" style=width:100 height="100" href="MAIN FIRST.html">
+<style>
+body {
+       padding: 25px;
+	   background-color: white;
+	   color: black;
+	   font-size: 25px;
+	   }
+.dark-mode {
+   background-color: black;
+   color: white;
+   }
+   </style>
+   <button onclick="myfunction()" style=color:red href="darkmode.html"> "dark/light mode"  </button>
+ <script>
+ function myFunction() { var element= document.body; element.classList.toggle("dark-mode");
+ }
+ </script>
+ 
+        
+   <body>
+ <div class="ul">
+ <a href="MAIN FIRST.html"><i class='fab fa-accusoft'></i>Home</a>
+ <a href="index.html">Trends</a>
+ <a href="movies.html">movies</a>
+ <a href="music.html">Music</a>
+ <a href="news.html">News</a>
+ <div class="search-container">
+ <form action="action_page.php">
+ <input type="search" placeholder="search here..." name="search"area-label="search through site content"><button type="search"><i class="fa fa-search"></i>SEARCH</button>
+ </form>
+ </div>
+ </div>
+ <h2 style=background-color:red style=background-position:center> NETRELOADED</h2>
+ <form action="news.html">
+ <label for="fname">First name:</label>
+ <br>
+ <input type="test" id="fname"
+ name="fname" value="jide "><br>
+ <label for="lname">Last name:</label>
+ <br>
+ <input type+"text" id="lname"
+ name="lname" value="jide"><br> <br>
+ <input type="submit" value="submit">
+ <p>  
+<a href="music.html"><img src="PICS.IMAGE.JPG.PNG" alt= "testing"style="width:"100" height="200"></a>
+
+ <a href=https://github.com/google/material-design-icons.git"></a>
+ <h4 style=background-color:#808588><footer style=background-color:"black" style=background size=width:60 height=60> Netreloaded&reg;</h4></footer> 
+
+ </P>
+ </body>
+ </html>
+
+ 
+          
