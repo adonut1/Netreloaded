@@ -138,7 +138,35 @@ body {
 
  <a href=https://github.com/google/material-design-icons.git"></a>
  <h4 style=background-color:#808588><footer style=background-color:"black" style=background size=width:60 height=60> Netreloaded&reg;</h4></footer> 
+Sure! Here's an example of how you can achieve that using JavaScript:
+<body>
+<h3> display emoji allover </h3>
+  <style>
+    .love-emoji {
+      position: absolute;
+      font-size: 30px;
+    }
+  </style>
+  <button id="showLoveButton">Click here to show love emojis!</button>
 
+  <script>
+document.getElementById("showLoveButton").addEventListener("click", function() {
+  const loveEmoji = document.createElement("span");
+  loveEmoji.className = "love-emoji";
+  
+  // Add your favorite love emoji here
+  loveEmoji.innerHTML = "❤️";
+  
+  loveEmoji.style.left = randomPosition(window.innerWidth) + "px";
+  loveEmoji.style.top = randomPosition(window.innerHeight) + "px";
+  
+  document.body.appendChild(loveEmoji);
+});
+
+function randomPosition(max) {
+  return Math.floor(Math.random() * max);
+}
+</script>
  </P>
  </body>
  </html>
