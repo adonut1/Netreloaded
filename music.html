@@ -1,140 +1,194 @@
 <!DOCTYPE html>
-<html lang="en-us" class="white-skin" data-skin="dark" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html>
 <head>
-<title>Netreloaded home</title>
-<link rel="icon" type="image/x-icon" href="logo2.jpg"/>
-<style>
-.alert-warning {
-    color: #8a6d3b;
-    background-color: #fcf8e3;
-    border-color: #faebcc;
-}
+	<title>News Articles</title>
+	<style>
+		/* Styling for the filters, sorting and pagination */
+		.filter-wrapper, .sort-wrapper, .pagination-wrapper {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
 
-.alert-warning hr {
-    border-top-color: #f7e1b5;
-}
+		.filter-label, .sort-label {
+			margin-right: 10px;
+		}
 
-.alert {
-    padding: 20px;
-    background-color: #0088ff;
-    color: white;
-}
+		select {
+			margin-right: 10px;
+		}
 
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+		.pagination-link {
+			padding: 3px 6px;
+			margin-right: 5px;
+			color: #000;
+			background-color: #eee;
+			text-decoration: none;
+			border-radius: 3px;
+		}
 
-.closebtn:hover {
-    color: black;
-}
+		.active-link {
+			color: #fff;
+			background-color: #007bff;
+		}
 
-.fa-download {
-    align-items: center;
-    appearance: none;
-    background-color: #FCFCFD;
-    border-radius: 4px;
-    border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: #36395A;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: "JetBrains Mono", monospace;
-    height: 48px;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    position: relative;
-    text-align: left;
-    text-decoration: none;
-    transition: box-shadow .15s, transform .15s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow, transform;
-    font-size: 18px;
-}
+		.news-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 
-.fa-download:focus {
-    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
+		.news-card {
+			flex: 1 1 300px;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+		}
 
-.fa-download:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-    transform: translateY(-2px);
-}
+		.news-title {
+			font-size: 20px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
 
-.fa-download:active {
-    box-shadow: #D6D6E7 0 3px 7px inset;
-    transform: translateY(2px);
-}
+		.news-description {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
 
-.fa-download:before {
-    content: "⬇️";
-    left: 0;
-}
+		.news-image {
+			max-width: 100%;
+			max-height: 200px;
+			margin-bottom: 10px;
+		}
 
-body {
-    padding: 25px;
-    background-color: white;
-    color: black;
-    font-size: 25px;
-}
+		.news-timestamp {
+			font-size: 12px;
+			color: #999;
+		}
 
-.dark-mode {
-    background-color: black;
-    color: white;
-}
+		.search-bar {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
 
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+		.search-input {
+			flex: 1;
+			margin-right: 10px;
+			padding: 5px;
+			border-radius: 3px;
+		}
+
+		.search-button {
+			padding: 5px 10px;
+			border: none;
+			border-radius: 3px;
+			background-color: #007bff;
+			color: #fff;
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body>
-<img src="logo2.jpg" alt="logo" style="width: 100px; height: 100px;"/>
-<button onclick="myFunction()" style="color: red;">"dark/light mode"</button>
-<script>
-function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
-</script>
+	<h1>Latest News Articles</h1>
 
-<div class="ul">
-<a href="MAIN FIRST.html"><i class='fab fa-accusoft'></i>Home</a>
-<a href="index.html">Trends</a>
-<a href="movies.html">Movies</a>
-<a href="music.html">Music</a>
-<a href="news.html">News</a>
-<div class="search-container">
-    <form action="action_page.php">
-        <input type="search" placeholder="Search here..." name="search" aria-label="Search through site content">
-        <button type="search"><i class="fa fa-search"></i>SEARCH</button>
-    </form>
-</div>
-</div>
-<h2 style="background-color: red; background-position: center;">NETRELOADED</h2>
-<form action="news.html">
-<label for="fname">First name:</label><br>
-<input type="text" id="fname" name="fname" value="jide "><br>
-<label for="lname">Last name:</label><br>
-<input type="text" id="lname" name="lname" value="jide"><br><br>
-<input type="submit" value="Submit">
-</form>
-<p>
-<a href="music.html"><img src="PICS.IMAGE.JPG.PNG" alt="testing" style="width: 100px; height: 200px;"></a>
-<a href="https://github.com/google/material-design-icons.git"></a>
-</p>
-<h4 style="background-color: #808588;"><footer style="background-color:black; width: 60px; height: 60px;">Netreloaded&reg;</h4></footer>
-</body>
-</html>
+	<!-- Search Bar -->
+	<div class="search-bar">
+		<input type="text" id="search-input" class="search-input" placeholder="Search news articles">
+		<button id="search-button" class="search-button">Search</button>
+	</div>
+
+	<!-- Filters -->
+	<div class="filter-wrapper">
+		<label class="filter-label">Category:</label>
+		<select id="category-filter">
+			<option value="">All</option>
+			<option value="politics">Politics</option>
+			<option value="entertainment">Entertainment</option>
+			<option value="sports">Sports</option>
+		</select>
+	</div>
+
+	<!-- Sorting -->
+	<div class="sort-wrapper">
+		<label class="sort-label">Sort by:</label>
+		<select id="sort-by">
+			<option value="timestamp-desc">Newest first</option>
+			<option value="timestamp-asc">Oldest first</option>
+			<option value="title-asc">Title A-Z</option>
+			<option value="title-desc">Title Z-A</option>
+		</select>
+	</div>
+
+	<!-- News list -->
+	<div class="news-list"></div>
+
+	<!-- Pagination -->
+	<div class="pagination-wrapper"></div>
+
+	<script>
+		// Sample news data
+		let newsData = [
+			{
+				id: 1,
+				title: "Lorem Ipsum is simply dummy text of the printing",
+				description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae dolor quis metus interdum ultricies. Donec eu rutrum nulla. Aenean eu lectus vitae urna consectetur eleifend id ac arcu.",
+				image: "https://via.placeholder.com/300x200.png?text=Image+1",
+				category: "politics",
+				timestamp: "2021-08-15T09:30:00.000Z"
+			},
+			{
+				id: 2,
+				title: "Contrary to popular belief, Lorem Ipsum is not simply random text",
+				description: "Nulla quis velit nec eros ullamcorper semper euismod sit amet nisi. Integer convallis, arcu a egestas consectetur, lorem urna accumsan velit, eget facilisis neque arcu a quam.",
+				image: "https://via.placeholder.com/300x200.png?text=Image+2",
+				category: "entertainment",
+				timestamp: "2021-08-10T14:45:00.000Z"
+			},
+			{
+				id: 3,
+				title: "There are many variations of passages of Lorem Ipsum available",
+				description: "Pellentesque a eros vitae augue blandit tincidunt vitae vel felis. Proin laoreet lorem vel quam mattis, vel maximus lacus dapibus. Donec eu sem ac augue eleifend rhoncus.",
+				image: "https://via.placeholder.com/300x200.png?text=Image+3",
+				category: "sports",
+				timestamp: "2021-08-05T11:15:00.000Z"
+			},
+			{
+				id: 4,
+				title: "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of",
+				description: "Aliquam non nisi ipsum. Nam dictum dui augue, eu varius diam rutrum a. In et facilisis nibh, in malesuada eros. Fusce ac sapien vel quam finibus placerat.",
+				image: "https://via.placeholder.com/300x200.png?text=Image+4",
+				category: "entertainment",
+				timestamp: "2021-08-01T07:00:00.000Z"
+			},
+			{
+				id: 5,
+				title: "The standard chunk of Lorem Ipsum used since the 1500s",
+				description: "Proin euismod pretium est, quis hendrerit nisi mollis vel. In iaculis tincidunt nunc id vehicula. Nulla sed nulla lorem. Sed tincidunt eu augue vitae luctus.",
+				image: "https://via.placeholder.com/300x200.png?text=Image+5",
+				category: "politics",
+				timestamp: "2021-07-30T18:20:00.000Z"
+			},
+			{
+				id: 6,
+				title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+				description: "Fusce interdum semper est. Pellentesque in risus purus. Sed auctor, dui dignissim egestas pharetra, nunc elit feugiat sapien, vel tincidunt quam eros vel quam.",
+				image: "https://via.placeholder.com/300x200.png?text=Image+6",
+				category: "sports",
+				timestamp: "2021-07-25T15:00:00.000Z"
+			},
+			{
+				id: 7,
+				title: "Sed ut perspiciatis unde omnis iste natus error sit",
+				description: "Nam lobortis mattis augue populus commodo. Integer sagittis feugiat ante.",
+				image: "https://via.placeholder.com/300x200.png?text=Image+7",
+				category: "politics",
+				timestamp: "2021-08-20T12:00:00.000Z"
+			},
+			{
+				id: 8,
+				title: "Quisque eleifend ullamcorper blandit",
+				description: "Quisque eleifend ullamcorper blandit. Duis nisi
