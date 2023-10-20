@@ -106,6 +106,32 @@ body {
  function myFunction() { var element= document.body; element.classList.toggle("dark-mode");
  }
  </script>
+  <style>
+    .social-icons {
+      position: fixed;
+      top: 20px;   /* Adjust top position as required */
+      right: 20px; /* Adjust right position as required */
+      z-index: 9999;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-left: 10px; /* Adjust spacing between icons */
+      color: #000; /* Adjust icon color if needed */
+      font-size: 20px; /* Adjust icon size if needed */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/your_facebook_page" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/your_instagram_page" target="_blank"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.twitter.com/your_twitter_page" target="_blank"><i class="fa fa-twitter"></i></a>
+  </div>
+
+</body>
+</html>
  
         
    <body>
