@@ -129,12 +129,106 @@ body {
     <a href="https://www.instagram.com/your_instagram_page" target="_blank"><i class="fa fa-instagram"></i></a>
     <a href="https://www.twitter.com/your_twitter_page" target="_blank"><i class="fa fa-twitter"></i></a>
   </div>
-
-</body>
- 
-        
    <body>
- <div class="ul">
+ <div ="ul">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search...">
+        <ul id="search-results"></ul>
+    </div>
+
+    <!-- Your content goes here -->
+
+<p> vibes 
+olamide
+apple
+boy 
+girl
+</p>
+.search-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+    z-index: 9999;
+}
+
+#search-input {
+    width: 300px;
+}
+
+#search-results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#search-results li {
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+var searchInput = document.getElementById('search-input');
+var searchResults = document.getElementById('search-results');
+
+// Get all HTML files in the specified folder or webpage
+var htmlFiles = [
+    'page1.html',
+    'page2.html',
+    'folder/page3.html'
+];
+
+function search() {
+    var searchText = searchInput.value.toLowerCase();
+    var results = [];
+
+    if (searchText.length > 0) {
+        htmlFiles.forEach(function(file) {
+            getFileContent(file, function(content) {
+                if (content.toLowerCase().indexOf(searchText) !== -1) {
+                    results.push({
+                        file: file,
+                        content: content
+                    });
+                }
+
+                if (results.length > 0) {
+                    displaySearchResults(results);
+                } else {
+                    searchResults.innerHTML = 'No results found.';
+                }
+            });
+        });
+    } else {
+        searchResults.innerHTML = '';
+    }
+}
+
+function displaySearchResults(results) {
+    var html = '';
+    results.forEach(function(result) {
+        html += '<li><a href="' + result.file + '">' + result.file + '</a><p>' + result.content + '</p></li>';
+    });
+    searchResults.innerHTML = html;
+}
+
+function getFileContent(file, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            callback(xhr.responseText);
+        }
+    };
+    xhr.open('GET', file, true);
+    xhr.send();
+}
+
+searchInput.addEventListener('keyup', search);
  <a href="MAIN FIRST.html"><i class='fab fa-accusoft'></i>Home</a>
  <a href="sign.html">SIGN UP 4 HERE</a>
  <a href="movies.html">movies</a>
