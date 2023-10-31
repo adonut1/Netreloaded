@@ -148,6 +148,8 @@ apple
 boy 
 girl
 </p>
+
+<style>
 .search-container {
     position: fixed;
     top: 0;
@@ -173,13 +175,15 @@ girl
     background-color: #fff;
     border-bottom: 1px solid #ccc;
 }
+</style>
+<script>
 var searchInput = document.getElementById('search-input');
 var searchResults = document.getElementById('search-results');
 
 // Get all HTML files in the specified folder or webpage
 var htmlFiles = [
-    'page1.html',
-    'page2.html',
+    'movie.html',
+    'news.html',
     'folder/page3.html'
 ];
 
@@ -229,6 +233,7 @@ function getFileContent(file, callback) {
 }
 
 searchInput.addEventListener('keyup', search);
+</script>
  <a href="MAIN FIRST.html"><i class='fab fa-accusoft'></i>Home</a>
  <a href="sign.html">SIGN UP 4 HERE</a>
  <a href="movies.html">movies</a>
