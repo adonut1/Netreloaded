@@ -28,7 +28,75 @@
 		</div>
 	 
 	 <button>Sign up</button>
-	 </form>
+	
+  <h2 style=text-align:center;>Clothing & Jewelry Store</h2>
+</head>
+<body>
+  <h1>Welcome to our Clothing & Jewelry Store</h1>
+
+  <h2>Product Catalog</h2>
+  <ul>
+    <li>
+      <h3>Item 1</h3>
+      <img src="item1.jpg" alt="Item 1">
+      <p>Description of Item 1.</p>
+      <p>Price: $X.XX</p>
+      <button onclick="addToCart('item1')">Add to Cart</button>
+    </li>
+    <li>
+      <h3>Item 2</h3>
+      <img src="item2.jpg" alt="Item 2">
+      <p>Description of Item 2.</p>
+      <p>Price: $X.XX</p>
+      <button onclick="addToCart('item2')">Add to Cart</button>
+    </li>
+    <li>
+      <h3>Item 3</h3>
+      <img src="item3.jpg" alt="Item 3">
+      <p>Description of Item 3.</p>
+      <p>Price: $X.XX</p>
+      <button onclick="addToCart('item3')">Add to Cart</button>
+    </li>
+    <!-- Add more items as needed -->
+  </ul>
+
+  <h2>Shopping Cart</h2>
+  <ul id="cartItems"></ul>
+  <p>Total: $<span id="totalAmount">0.00</span></p>
+  <button onclick="checkout()">Checkout</button>
+
+  <script>
+    var cart = [];
+    var total = 0.00;
+
+    function addToCart(item) {
+      cart.push(item);
+      updateCart();
+      updateTotal(item.price);
+    }
+
+    function updateCart() {
+      var cartItems = document.getElementById("cartItems");
+      cartItems.innerHTML = "";
+      cart.forEach(function(item) {
+        var li = document.createElement("li");
+        li.textContent = item.name;
+        cartItems.appendChild(li);
+      });
+    }
+
+    function updateTotal(price) {
+      total += parseFloat(price);
+      var totalAmount = document.getElementById("totalAmount");
+      totalAmount.textContent = total.toFixed(2);
+    }
+
+    function checkout() {
+      // Implement logic to process the order and redirect to a payment page
+      alert("Thank you for your order! Redirecting to payment page...");
+      window.location.href = "payment.html";
+    }
+  </script>
 
 </body>
 </html>
