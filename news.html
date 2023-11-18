@@ -1,4 +1,4 @@
-<!doctype html>
+ko<!doctype html>
 <html>
 <!DOCTYPE html>
 <html>
@@ -91,7 +91,101 @@ body {
  </P>
 <h2> X news <a href="://twitter.com/SaharaReporters/status/1705525085979717663?t=eEuAOSvWVPVP53q2HoUSyw&s=19"> 
 </h2>
-
- </body>
- </html>
-
+    <h2>Movie Download Page</h2>
+    <style>
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .featured-movies {
+            justify-content: flex-start;
+        }
+        
+        .hollywood-movies {
+            justify-content: center;
+        }
+        
+        .nollywood-movies {
+            justify-content: flex-end;
+        }
+        
+        .movie-box {
+            width: 150px;
+            height: 200px;
+            margin: 10px;
+            background-color: #F5F5F5;
+            border: 1px solid #DDD;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        .movie-box img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h2>Featured Movie</h2>
+        <div class="movies featured-movies">
+            <a href="featured_movie_download.html">
+                <div class="movie-box">
+                    <img src="featured_movie_image.jpg" alt="Featured Movie">
+                    <p>Featured Movie</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Hollywood Movies</h2>
+        <div class="movies hollywood-movies">
+            <a href="hollywood_movie1_download.html">
+                <div class="movie-box">
+                    <img src="hollywood_movie1_image.jpg" alt="Hollywood Movie 1">
+                    <p>Hollywood Movie 1</p>
+                </div>
+            </a>
+            <a href="hollywood_movie2_download.html">
+                <div class="movie-box">
+                    <img src="hollywood_movie2_image.jpg" alt="Hollywood Movie 2">
+                    <p>Hollywood Movie 2</p>
+                </div>
+            </a>
+            <!-- Add more Hollywood movies here -->
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Nollywood Movies</h2>
+        <div class="movies nollywood-movies">
+            <a href="nollywood_movie1_download.html">
+                <div class="movie-box">
+                    <img src="nollywood_movie1_image.jpg" alt="Nollywood Movie 1">
+                    <p>Nollywood Movie 1</p>
+                </div>
+            </a>
+            <a href="nollywood_movie2_download.html">
+                <div class="movie-box">
+                    <img src="nollywood_movie2_image.jpg" alt="Nollywood Movie 2">
+                    <p>Nollywood Movie 2</p>
+                </div>
+            </a>
+            <!-- Add more Nollywood movies here -->
+        </div>
+    </div>
+</body>
+</html>
