@@ -8,8 +8,8 @@
 	  die("Valid email is required");
  }
  
- if (strlen($_POST["password"]) <8) {
-	  die("password must be at least 8 character");
+ if (strlen($_POST["password"]) <6) {
+	  die("password must be at least 6 character");
  }
  
  if ( ! preg_match("/[a-z]/i", $_POST["password"})) {
